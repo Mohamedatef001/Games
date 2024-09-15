@@ -132,7 +132,6 @@
 
         // Initial setup
         overlay.style.display = 'block'; // Show the "Press Enter to Start" overlay
-renderSnake();
+        renderSnake();
         
 // ---------------------------------------------------------------------------------------//
-

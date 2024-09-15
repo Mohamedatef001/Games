@@ -1,3 +1,8 @@
+@font-face {
+    font-family: curvy;
+    src: url(fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+
 body{
     background-color: rgb(254, 254, 241);
     display: flex;
@@ -111,11 +116,149 @@ body{
   }
   /* ------------------------------------------------------------------- */
 .game2{
-    margin-top: 70px;
-    width: 400px;
-    height: 400px;
-    border: 3px solid;
+    margin-top: 60px;
+    width: 300px;
+    height: 300px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
+}
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: tomato;
+}
+#num1,
+#num4,
+#num7{
+    border-right: 3px solid;
+}
+#num2,
+#num5,
+#num8{
+    border-right: 3px solid;
+}
+#num1,
+#num2,
+#num3{
+    border-bottom: 3px solid;
+}
+#num4,
+#num5,
+#num6{
+    border-bottom: 3px solid;
+}
+.keys{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#start{
+    font-weight: bold;
+    font-size: 30px;
+    font-family: curvy;
+    border: none;
+    color: rgb(245, 37, 0);
+    background-color: rgb(89, 89, 231);
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#start:hover{
+    background-color: rgb(121, 121, 238);
+}
+#reset{
+    font-weight: bold;
+    font-size: 30px;
+    font-family: curvy;
+    border: none;
+    color: rgb(245, 37, 0);
+    background-color: rgb(89, 89, 231);
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#reset:hover {
+    background-color: rgb(121, 121, 238);
+}
+
+.playerWin{
+    color:rgb(22, 184, 22);
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.computerWin{
+    color: rgb(215, 14, 14);
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* ----------------------------------------------------------------------------- */
+.game3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+input[type="number"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    width: 60px;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 0px;
+}
+
+#message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#guessCount {
+    font-weight: bold;
+    color: #f00;
+}
+
+#resetGame {
+    background-color: #f00;
+}
+
+#resetGame:hover {
+    background-color: #c00;
 }
