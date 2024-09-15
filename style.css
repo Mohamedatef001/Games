@@ -1,0 +1,121 @@
+body{
+    background-color: rgb(254, 254, 241);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+/* Navbar box when collapsed */
+.navbar {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: width 0.5s ease;
+    cursor: pointer;
+}
+
+/* Expanded navbar */
+.navbar:hover,
+.navbar:focus {
+    width: 500px;
+    /* Expand horizontally */
+    height: 50px;
+    /* Keep height fixed */
+    border-radius: 10px;
+}
+
+/* Hidden navbar content initially */
+.navbar-content {
+    display: flex;
+    flex-direction: row;
+    /* Make content horizontal */
+    align-items: center;
+    justify-content: space-around;
+    /* Space items evenly */
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+
+/* Show content when navbar expands */
+.navbar:hover .navbar-content,
+.navbar:focus .navbar-content {
+    opacity: 1;
+}
+
+/* Navbar links */
+.navbar-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.navbar-content a:hover{
+    color: rgb(175, 174, 174);
+}
+
+/* Show links smoothly when expanded */
+.navbar:hover .navbar-content a,
+.navbar:focus .navbar-content a {
+    opacity: 1;
+}
+/* ------------------------------------------------------------------------------ */
+  .game {
+      margin-top: 50px;
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background-color: lightgray;
+      border: 2px solid rgb(37, 37, 37);
+      border-radius: 5px;
+  }
+
+  .snake-segment {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: green;
+      border-radius: 5px;
+  }
+
+  .food {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: rgb(220, 31, 31);
+      border-radius: 50%;
+  }
+
+  .score {
+      margin-top: 10px;
+      font-size: 24px;
+      font-weight: bold;
+  }
+  .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+      display: none;
+  }
+  /* ------------------------------------------------------------------- */
+.game2{
+    margin-top: 70px;
+    width: 400px;
+    height: 400px;
+    border: 3px solid;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
