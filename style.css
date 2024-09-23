@@ -10,7 +10,8 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
+    margin: 0;
+    padding: 0;
 }
 /* Navbar box when collapsed */
 .navbar {
@@ -71,6 +72,49 @@ body{
 .navbar:focus .navbar-content a {
     opacity: 1;
 }
+
+
+
+.card{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-family: curvy;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+#first{
+    background-color: rgb(247, 46, 10);
+   
+    opacity: 1;
+}
+#second{
+    background-color: aqua;
+    opacity: 0.5;
+}
+#third{
+    background-color: #555;
+    opacity: 0.5;
+}
+#next{
+    position: absolute;
+    top: 75%;
+    left:30%;
+}
+
+#previous{
+     position: absolute;
+     top: 75%;
+     left: 63%;
+}
+
+
 /* ------------------------------------------------------------------------------ */
   .game {
       margin-top: 50px;
@@ -114,6 +158,7 @@ body{
       font-size: 24px;
       display: none;
   }
+ 
   /* ------------------------------------------------------------------- */
 .game2{
     margin-top: 60px;
@@ -262,3 +307,15 @@ p {
 #resetGame:hover {
     background-color: #c00;
 }
+
+ @media (min-width:1450px) {
+     .game {
+         margin-top: 250px;
+     }
+     .game2{
+        margin-top: 250px;
+     }
+     .game3{
+        margin-top : 250px;
+     }
+ }

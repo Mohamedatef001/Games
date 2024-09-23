@@ -1,0 +1,153 @@
+ body {
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     /* Full viewport height */
+     background-color: #f0f0f0;
+     /* Light background */
+ }
+ /* Navbar box when collapsed */
+ .navbar {
+     width: 50px;
+     height: 50px;
+     background-color: #333;
+     border-radius: 10px;
+     overflow: hidden;
+     transition: width 0.5s ease;
+     cursor: pointer;
+ }
+
+ /* Expanded navbar */
+ .navbar:hover,
+ .navbar:focus {
+     width: 500px;
+     /* Expand horizontally */
+     height: 50px;
+     /* Keep height fixed */
+     border-radius: 10px;
+ }
+
+ /* Hidden navbar content initially */
+ .navbar-content {
+     display: flex;
+     flex-direction: row;
+     /* Make content horizontal */
+     align-items: center;
+     justify-content: space-around;
+     /* Space items evenly */
+     opacity: 0;
+     width: 100%;
+     height: 100%;
+     transition: opacity 0.5s ease;
+ }
+
+ /* Show content when navbar expands */
+ .navbar:hover .navbar-content,
+ .navbar:focus .navbar-content {
+     opacity: 1;
+ }
+
+ /* Navbar links */
+ .navbar-content a {
+     color: white;
+     padding: 10px;
+     text-decoration: none;
+     font-size: 18px;
+     opacity: 0;
+     transition: opacity 0.3s ease;
+ }
+
+ .navbar-content a:hover {
+     color: rgb(175, 174, 174);
+ }
+
+ /* Show links smoothly when expanded */
+ .navbar:hover .navbar-content a,
+ .navbar:focus .navbar-content a {
+     opacity: 1;
+ }
+
+ /* Main container centered */
+ #main {
+     position: relative;
+     width: 90%;
+     /* Adjust width to be responsive */
+     height: 500px;
+     /* Fixed height */
+ }
+
+ /* General styles for cards */
+ .card {
+     width: 200px;
+     /* Fixed width */
+     height: 300px;
+     /* Fixed height */
+     position: absolute;
+     border-radius: 20px;
+     text-align: center;
+     font-size: 40px;
+     /* Fixed font size */
+     font-family: curvy;
+     font-weight: bold;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: all 0.5s ease;
+ }
+
+ /* Responsive styles for cards */
+ #first {
+     background-color: rgb(247, 46, 10);
+     left: 50%;
+     top: 28%;
+     transform: translateX(-50%);
+     /* Center the first card */
+     z-index: 1;
+     opacity: 1;
+ }
+
+ #second {
+     background-color: aqua;
+     left: calc(50% + 200px);
+     /* Offset from the center to the right */
+     top: 33%;
+     width: 150px;
+     height: 250px;
+     z-index: -1;
+     opacity: 0.5;
+ }
+
+ #third {
+     background-color: #555;
+     left: calc(50% - 200px);
+     /* Offset from the center to the left */
+     top: 33%;
+     width: 150px;
+     height: 250px;
+     z-index: -1;
+     opacity: 0.5;
+ }
+
+ /* Fixed positions for Next and Previous buttons */
+ #next {
+     position: absolute;
+     bottom: 20px;
+     left: 10px;
+ }
+
+ #previous {
+     position: absolute;
+     bottom: 20px;
+     right: 10px;
+ }
+
+ /* Ensure no resizing based on screen size */
+ img {
+     width: 50px;
+     /* Fixed width */
+     height: 50px;
+     /* Fixed height */
+ }

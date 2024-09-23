@@ -93,4 +93,15 @@ startButton.addEventListener('click', () => {
   cells.forEach(cell => cell.textContent = "");  // Clear the grid
   gameActive = true;  // Game is active
   currentPlayer = "X";  // Player always starts first
+  if (scoreO > scoreX) {
+       
+        resultDiv.classList.add('computerWin');
+        resultDiv.textContent = `Score: X = ${scoreX}, O = ${scoreO}`;  // Show the result
+
+  } else {
+        
+        resultDiv.classList.add('playerWin');
+        resultDiv.textContent = `Score: X = ${scoreX}, O = ${scoreO}`;  // Show the result
+
+  }
 });
